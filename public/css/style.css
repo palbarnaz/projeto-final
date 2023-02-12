@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(27, 27, 27);
+}
+
+header {
+  height: 6vh;
+}
+
+main {
+  height: 94vh;
+}
+
+.background {
+  background: #202020;
+}
+
+.card-login {
+  width: 20.5rem;
+  height: min-content;
+  padding: 20px;
+  position: relative;
+  border-radius: 3px;
+}
+
+.card-login::before,
+.card-login::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: calc(100% + 30px);
+  height: calc(100% + 30px);
+  background: radial-gradient(#EEB1BF 5%, rgb(252, 32, 186) 25%, #b40288 50%, #300243 80%, #030243 100%);
+  background-size: 300%;
+  border-radius: 8px;
+  animation: animarBorda 8s linear infinite;
+
+
+}
+
+@keyframes animarBorda {
+  0% {
+    background-position: 0;
+  }
+
+  100% {
+    background-position: 300%;
+  }
+}
+
+.container::after {
+  filter: blur(50px);
+}
+
+.card-login h1 {
+  margin-bottom: 30px;
+}
+
+.card-login form {
+  font-size: 1rem;
+}
+
+.card-login form .form-group {
+  margin-bottom: 12px;
+}
+
+.card-login form input[type=submit] {
+
+  margin-top: 12px;
+}
+
+.card-login form input {
+  font-size: 1.2rem;
+  width: 17rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+.th {
+  width: 100px;
+}
+
+.btn-pink {
+  background-color: rgb(252, 32, 186);
+  border: rgb(252, 32, 186);
+  transition: 1s;
+  color: white;
+}
+
+.btn-pink:hover {
+background: #7209b7;
+}
+.bg-pink {
+  color: black;
+}
+.bg-pink:hover {
+  color: #1b1a70;
+}
+.logout {
+  min-width: 5rem !important;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página-login</title>
+  <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+  <header class="container-fluid background p-0 ">
+
+    <div class=" d-flex justify-content-end align-items-center h-100 mx-3">
+      <button class=" btn text-white dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+        <span id="email-header"></span>
+      </button>
+      <ul class="dropdown-menu logout p-0 dropdown-menu-dark dropdown-menu-end ">
+        <li class="text-center"><button class=" btn btn-sair text-white  " onclick="sairDoSistema()">Sair</button></li>
+      </ul>
+    </div>
+
+  </header>
+
+  <main class="container-fluid vw-100  ">
+
+    <section class="row w-100 h-25 m-0 align-items-end">
+      <article class="col w-100">
+        <h1 class="text-white">Meus Recados</h1>
+        <form class="row " id="formulario-recados">
+          <div class="col-12 col-sm-4">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control  border-dark " name="descricao" id="descricao"
+                placeholder="Descrição" aria-label="Descrição">
+            </div>
+
+          </div>
+          <div class="col-12 col-sm-8 ">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control  border-dark" name="detalhe" id="detalhe"
+                placeholder="Detalhamento" aria-label="Detalhamento">
+              <input class="btn btn-pink text-white" type="submit" value="Salvar"></input>
+            </div>
+          </div>
+        </form>
+      </article>
+    </section>
+
+    <section class="row w-100  m-0 justify-content-center bg-body-secondary rounded-2 mb-5">
+      <article class="col w-100 p-0">
+        <div class="row justify-content-center w-100 m-0">
+          <div class="col  p-0">
+            <div class=" table-responsive ">
+              <table class="table table-striped text-center align-middle ">
+                <thead>
+                  <tr class="text-start">
+                    <th class="text-center">#</th>
+                    <th>Descrição</th>
+                    <th>Detalhamento</th>
+                    <th class=" text-center th">Ação</th>
+                  </tr>
+                </thead>
+                <tbody id="recados">
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+  <div class="modal fade" tabindex="-1" id="modal-editar" aria-labelledby="modal-editar-recado" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"><span class="d-none" id="indice-recado"></span> Editar Recado</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form id="formulario-editar-recados">
+          <div class="modal-body">
+            <div class=" container input-group mb-3 mt-2">
+              <div class="row w-100">
+                <label for="edita-descricao" class=" col-12 form-label">Descrição</label>
+                <input type="text" class=" col  form-control" name="descricao" id="edita-descricao"
+                  placeholder="Descrição" aria-label="Descrição">
+              </div>
+            </div>
+
+            <div class=" container  input-group mb-3">
+              <div class="row w-100">
+                <label for="edita-detalhe" class=" col-12 form-label">Detalhamento</label>
+                <input type="text" class=" col  form-control  " name="detalhe" id="edita-detalhe"
+                  placeholder="Detalhamento" aria-label="Detalhamento">
+
+              </div>
+
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            <button type="submit" class="btn btn-pink text-white">Salvar alteração</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="./assets/bootstrap/js/popper.min.js"></script>
+  <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
+
+  <script src="./js/home.js"></script>
+</body>
+
+</html>
